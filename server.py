@@ -22,6 +22,7 @@ def comments_handler():
         comments = json.loads(file.read())
 
     if request.method == 'POST':
+        print "post request"
         comments.append(request.form.to_dict())
 
         with open('comments.json', 'w') as file:
